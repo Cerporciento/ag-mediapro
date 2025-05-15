@@ -1,93 +1,167 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AG MEDIA PRO - Consultoría para creadores</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #222;
-        }
-        header {
-            background-color: #fff;
-            padding: 60px 20px;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            margin-top: 10px;
-            font-size: 1.2em;
-            color: #555;
-        }
-        section {
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        section h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-        ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        li {
-            padding: 8px 0;
-        }
-        .cta {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .cta a {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: #000;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-        }
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 0.9em;
-            color: #888;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AG Media Pro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXRVz4+Mb0ZV9aZ0zFZ0Wg0jc3Xtq6F69gVjK+fH6J1+1k8qCwZsN9Zn1loMkU9R1eoO2r5Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    nav ul {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #000;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+    section {
+      padding: 100px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    section:nth-child(even) {
+      background: #fff;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 1rem;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>AG MEDIA PRO</h1>
-        <p>Consultoría para creadores de contenido artístico</p>
-    </header>
-    <section>
-        <p>Te ayudo a crecer tu cuenta de Instagram, mejorar tu contenido y monetizar en plataformas de suscripción.</p>
-        <h2>¿Qué puedes lograr?</h2>
-        <ul>
-            <li>✓ Más seguidores comprometidos en Instagram</li>
-            <li>✓ Estrategias para ganar suscriptores que pagan</li>
-            <li>✓ Optimización de tu bio y contenido</li>
-            <li>✓ Plan de acción personalizado</li>
-        </ul>
-    </section>
-    <div class="cta">
-        <a href="https://calendly.com/ag-mediapro-info/30min" target="_blank">Agendar consultoría gratuita</a>
-    </div>
-    <section>
-        <h2>Sobre mí</h2>
-        <p>AG-MEDIA PRO se centra en creadores de contenido que quieren vivir de su arte sin complicarse con el marketing.</p>
-    </section>
-    <footer>
+  <header>
+    <h1>AG Media Pro</h1>
+    <i class="fas fa-bars menu-toggle"></i>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us?</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="fade-in">
+    <h2>Welcome to AG Media Pro</h2>
+    <p>Helping creators grow, monetize and dominate their niche.</p>
+    <img src="https://source.unsplash.com/800x400/?digital,marketing" alt="Marketing Image" />
+  </section>
+
+  <section id="about" class="fade-in">
+    <h2>About</h2>
+    <p>We are a digital marketing agency focused on helping artists and content creators grow their audience and convert followers into paying fans.</p>
+    <img src="https://source.unsplash.com/800x400/?teamwork,content" alt="About Image" />
+  </section>
+
+  <section id="services" class="fade-in">
+    <h2>Services</h2>
+    <ul>
+      <li>Instagram Growth Strategy</li>
+      <li>Monetization on Subscription Platforms</li>
+      <li>Content Consultation</li>
+      <li>One-on-One Coaching</li>
+    </ul>
+    <img src="https://source.unsplash.com/800x400/?services,consulting" alt="Services Image" />
+  </section>
+
+  <section id="why" class="fade-in">
+    <h2>Why Choose Us?</h2>
+    <p>We tailor strategies to each creator's unique style and audience. Our team has helped influencers achieve consistent growth and sustainable income.</p>
+    <img src="https://source.unsplash.com/800x400/?success,growth" alt="Why Us Image" />
+  </section>
+
+  <section id="team" class="fade-in">
+    <h2>Team</h2>
+    <p>Meet our passionate team of marketers, strategists and content creators who make it all happen.</p>
+    <img src="https://source.unsplash.com/800x400/?team,people" alt="Team Image" />
+  </section>
+
+  <section id="faq" class="fade-in">
+    <h2>FAQ</h2>
+    <p><strong>Q: How do I book a consultation?</strong><br>A: Use the contact form below or book directly via Calendly.</p>
+    <p><strong>Q: What platforms do you work with?</strong><br>A: We specialize in Instagram and subscription-based platforms.</p>
+    <img src="https://source.unsplash.com/800x400/?questions,answers" alt="FAQ Image" />
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p>Let’s talk about how we can help you grow.</p>
+    <a href="https://calendly.com/ag-mediapro-info/30min" target="_blank">Book a Free 30-Minute Call</a>
+    <img src="https://source.unsplash.com/800x400/?contact,meeting" alt="Contact Image" />
+  </section>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav ul');
+    toggle.addEventListener('click', () => nav.classList.toggle('active'));
+  </script>
+  <footer>
         © 2025 AG MEDIA PRO · Contacto vía Calendly
-    </footer>
+  </footer>
 </body>
 </html>
