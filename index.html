@@ -12,40 +12,49 @@
       box-sizing: border-box;
       scroll-behavior: smooth;
     }
+
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
       background-color: #f4f4f4;
       color: #333;
     }
+
     header {
       background: #000;
       color: #fff;
       padding: 1rem;
       position: fixed;
       width: 100%;
+      top: 0;
       z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
     header h1 {
       font-size: 1.5rem;
     }
+
     nav ul {
       display: flex;
       gap: 1rem;
       list-style: none;
     }
+
     nav ul li a {
       color: white;
       text-decoration: none;
+      font-weight: bold;
     }
+
     .menu-toggle {
       display: none;
       font-size: 1.5rem;
       cursor: pointer;
     }
+
     @media (max-width: 768px) {
       nav ul {
         display: none;
@@ -55,38 +64,51 @@
         top: 60px;
         right: 0;
         padding: 1rem;
+        width: 200px;
       }
+
       nav ul.active {
         display: flex;
       }
+
       .menu-toggle {
         display: block;
       }
     }
+
+    main {
+      padding-top: 80px;
+    }
+
     section {
       padding: 100px 20px;
       max-width: 1000px;
       margin: auto;
     }
+
     section:nth-child(even) {
       background: #fff;
     }
+
     img {
       max-width: 100%;
       height: auto;
       margin-top: 1rem;
     }
+
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
       animation: fadeIn 1s ease forwards;
     }
+
     @keyframes fadeIn {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
+
     .button {
       display: inline-block;
       background-color: #2c3e50;
@@ -98,11 +120,19 @@
       font-weight: bold;
       transition: background-color 0.3s ease;
     }
-  
+
     .button:hover {
       background-color: #1a252f;
     }
 
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 50px;
+    }
   </style>
 </head>
 <body>
@@ -122,61 +152,64 @@
     </nav>
   </header>
 
-  <section id="home" class="fade-in">
-    <h2>Welcome to AG Media Pro</h2>
-    <p>Helping creators grow, monetize and dominate their niche.</p>
-    <img src="/assets/marketing.jpg" alt="Marketing Image" />
-  </section>
+  <main>
+    <section id="home" class="fade-in">
+      <h2>Welcome to AG Media Pro</h2>
+      <p>Helping creators grow, monetize and dominate their niche.</p>
+      <img src="/assets/marketing.jpg" alt="Marketing strategy in action" />
+    </section>
 
-  <section id="about" class="fade-in">
-    <h2>About</h2>
-    <p>We are a digital marketing agency focused on helping artists and content creators grow their audience and convert followers into paying fans.</p>
-     <img src="/assets/about.jpg" alt="About Image" />
-  </section>
+    <section id="about" class="fade-in">
+      <h2>About</h2>
+      <p>We are a digital marketing agency focused on helping artists and content creators grow their audience and convert followers into paying fans.</p>
+      <img src="/assets/about.jpg" alt="About AG Media Pro" />
+    </section>
 
-  <section id="services" class="fade-in">
-    <h2>Services</h2>
-    <ul>
-      <li>Instagram Growth Strategy</li>
-      <li>Monetization on Subscription Platforms</li>
-      <li>Content Consultation</li>
-      <li>One-on-One Coaching</li>
-    </ul>
-     <img src="/assets/Services.png" alt="Services Image" />
-  </section>
+    <section id="services" class="fade-in">
+      <h2>Services</h2>
+      <ul>
+        <li>Instagram Growth Strategy</li>
+        <li>Monetization on Subscription Platforms</li>
+        <li>Content Consultation</li>
+        <li>One-on-One Coaching</li>
+      </ul>
+      <img src="/assets/Services.png" alt="Our Services" />
+    </section>
 
-  <section id="why" class="fade-in">
-    <h2>Why Choose Us?</h2>
-    <p>We tailor strategies to each creator's unique style and audience. Our team has helped influencers achieve consistent growth and sustainable income.</p>
-    <img src="/assets/why.jpg" alt="Why Us Image" />
-  </section>
+    <section id="why" class="fade-in">
+      <h2>Why Choose Us?</h2>
+      <p>We tailor strategies to each creator's unique style and audience. Our team has helped influencers achieve consistent growth and sustainable income.</p>
+      <img src="/assets/why.jpg" alt="Reasons to choose us" />
+    </section>
 
-  <section id="team" class="fade-in">
-    <h2>Team</h2>
-    <p>Meet our passionate team of marketers, strategists and content creators who make it all happen.</p>
-    <img src="/assets/team.jpg" alt="Team Image" />
-  </section>
+    <section id="team" class="fade-in">
+      <h2>Team</h2>
+      <p>Meet our passionate team of marketers, strategists and content creators who make it all happen.</p>
+      <img src="/assets/team.jpg" alt="AG Media Pro Team" />
+    </section>
 
-  <section id="faq" class="fade-in">
-    <h2>FAQ</h2>
-    <p><strong>Q: How do I book a consultation?</strong><br>A: Use the contact form below or book directly via Calendly.</p>
-    <p><strong>Q: What platforms do you work with?</strong><br>A: We specialize in Instagram and subscription-based platforms.</p>
-    <img src="/assets/faq.jpg" alt="FAQ Image" />
-  </section>
+    <section id="faq" class="fade-in">
+      <h2>FAQ</h2>
+      <p><strong>Q: How do I book a consultation?</strong><br>A: Use the contact form below or book directly via Calendly.</p>
+      <p><strong>Q: What platforms do you work with?</strong><br>A: We specialize in Instagram and subscription-based platforms.</p>
+      <img src="/assets/faq.jpg" alt="Frequently Asked Questions" />
+    </section>
 
-  <section id="contact" class="fade-in">
-  <h2>Contact</h2>
-  <p>Let’s talk about how we can help you grow.</p>
-  <a href="https://calendly.com/ag-mediapro-info/30min" target="_blank" class="button">Book a Free 30-Minute Call</a>
-  </section>
+    <section id="contact" class="fade-in">
+      <h2>Contact</h2>
+      <p>Let’s talk about how we can help you grow.</p>
+      <a href="https://calendly.com/ag-mediapro-info/30min" target="_blank" class="button">Book a Free 30-Minute Call</a>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 AG MEDIA PRO LLC · Contacto vía <a href="https://calendly.com/ag-mediapro-info/30min" target="_blank" style="color: #fff; text-decoration: underline;">Calendly</a>
+  </footer>
 
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav ul');
     toggle.addEventListener('click', () => nav.classList.toggle('active'));
   </script>
-  <footer>
-        © 2025 AG MEDIA PRO · Contacto vía Calendly
-  </footer>
 </body>
 </html>
